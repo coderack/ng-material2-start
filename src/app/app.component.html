@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  Angular Material 2 App
+</md-toolbar>
+
+<div style="padding: 7px">
+  <button md-button>Basic Button</button>
+  <button md-raised-button>Raised Button</button>
+
+  <md-slide-toggle>Slide Toggle</md-slide-toggle>
+
+  <!-- Optional Version Output -->
+  <hr>
+  <p *ngIf="version | async" style="color: #333">
+    Using Angular Material
+    (SHA {{ (version | async)?.commit.message.split(" ")[0] }}) from
+    {{ (version | async)?.commit.author.date | date: 'short' }}
+  </p>
+
+</div>
